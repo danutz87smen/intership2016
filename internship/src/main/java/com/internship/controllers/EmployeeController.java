@@ -19,10 +19,6 @@ public class EmployeeController {
 	@Autowired
 	private IEmployeeService service;
 	
-	public EmployeeController(){
-		System.out.println("asd");
-	}
-
 	@RequestMapping(value = "/employees/", method = RequestMethod.GET)
 	public ResponseEntity<List<Employee>> getAllEmployee() {
 		List<Employee> emps = service.getEmployees();

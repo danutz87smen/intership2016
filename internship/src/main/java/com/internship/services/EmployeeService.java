@@ -11,18 +11,18 @@ import com.internship.model.Employee;
 
 @Service
 @Transactional
-public class EmployeeService implements IEmployeeService{
+public class EmployeeService implements IEmployeeService {
 	@Autowired
 	private EmployeeDao employeeService;
 
 	@Override
 	public Employee getEmployeeById(Long id) {
 		return employeeService.getEntityById(id);
-		}
+	}
 
 	@Override
 	public void persistEmployee(Employee emp) {
-		employeeService.createEntity(emp);		
+		employeeService.createEntity(emp);
 	}
 
 	@Override
